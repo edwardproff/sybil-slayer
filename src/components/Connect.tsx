@@ -27,7 +27,7 @@ export function Connect() {
       mintChain: 0,
     }
 
-    const url = `linea/wallet/${address}/score?` + (new URLSearchParams(params))
+    const url = `gnosis/wallet/${address}/score?` + (new URLSearchParams(params))
       .toString()
       .replaceAll("&", ":AMP:")
 
@@ -85,7 +85,7 @@ export function Connect() {
               Loading...
             </> : (
               <>
-                {score > 0 && score < 40 &&
+                {score < 40 &&
                     <>
                         <div>
                             <Center>
